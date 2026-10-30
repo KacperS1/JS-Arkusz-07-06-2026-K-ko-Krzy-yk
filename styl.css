@@ -1,0 +1,53 @@
+* {
+    font-family: 'Lucida Console' monospace;
+}
+body {
+    background-color: honeydew;
+    text-align: center;
+}
+header,footer {
+    padding: 20px;
+}
+#lewa {
+    background-color: palegreen;
+    width: 20%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 40px;
+    height: 200px;
+}
+#prawa {
+    background-color: palegreen;
+    width: 20%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 40px;
+    display: none;
+    height: 200px;
+}
+#center {
+    width: 60%;
+    box-shadow: 0 0 10px DarkGreen;
+}
+img {
+    width: 80%;
+    margin: 10px;
+    cursor: pointer;
+}
+table {
+    width: 90%;
+    margin: 10px;
+    border: solid 3px seagreen;
+    border-collapse: collapse;
+}
+td {
+    border: solid 3px seagreen;
+}
+main {
+    display: flex;
+}
+

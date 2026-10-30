@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zagraj w kółko i krzyżyk</h1>
+    </header>
+
+    <main>
+        <section id="lewa">
+            <h2>Gra kółko</h2>
+        </section>
+
+        <section id="center">
+            <table>
+                <tr>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                </tr>
+                <tr>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                </tr>
+                <tr>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                    <td><img src="nic.png" onclick="gra(this)"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="prawa">
+            <h2>Gra krzyżyk</h2>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://pl.battleship-game.org/" target="_blank">Zagraj w statki</a>
+        <p>Grę opracował: Kacper Świstek</p>
+    </footer>
+
+    <script>
+        let gracz = "kolko";
+
+        function gra(obrazek) {
+            if (obrazek.src.includes("nic.png")) {
+                
+                if (gracz === "kolko") {
+                    obrazek.src = "o.png";
+                    document.getElementById("lewa").style.display = "none";
+                    document.getElementById("prawa").style.display = "block";
+                    gracz = "krzyzyk";
+                } else {
+                    obrazek.src = "x.png";
+                    document.getElementById("lewa").style.display = "block";
+                    document.getElementById("prawa").style.display = "none";
+                    gracz = "kolko";
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>
